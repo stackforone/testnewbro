@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกหวยที่คุณจะเล่น</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>เลือกหวยที่คุณจะเล่น</h2>
+        <div id="main-menu" class="button-group">
+            <button class="lottery-btn" onclick="showSubMenu('ฮานอย')">หวยฮานอย</button>
+            <button class="lottery-btn" onclick="selectLottery('หวยไทย')">หวยไทย</button>
+            <button class="lottery-btn" onclick="selectLottery('หวยหุ้น')">หวยหุ้น</button>
+            <button class="lottery-btn" onclick="selectLottery('หวยหุ้น VIP')">หวยหุ้น VIP</button>
+            <button class="lottery-btn" onclick="selectLottery('หวยลาว')">หวยลาว</button>
+        </div>
+
+        <div id="submenu-hanoi" class="submenu hidden">
+            <button class="lottery-btn" onclick="showDetails('ฮานอยปกติ')">ฮานอยปกติ</button>
+            <button class="lottery-btn" onclick="showDetails('ฮานอยอาเซียน')">ฮานอยอาเซียน</button>
+        </div>
+
+        <div id="details" class="details hidden">
+            <h3 id="lottery-title"></h3>
+            <p>อัตราจ่าย</p>
+            <ul>
+                <li>3 ตัวบน: 0</li>
+                <li>2 ตัวบน: 0</li>
+                <li>วิ่งบน: 2</li>
+                <li>3 ตัวโต๊ด: 0</li>
+                <li>2 ตัวล่าง: 0</li>
+                <li>วิ่งล่าง: 0.5</li>
+            </ul>
+            <p>เวลาปิดรับ: 00:00</p>
+            <p>เวลาเฉลย: 00:00</p>
+             <button class="lottery-btn" onclick="window.location.href='choose.html'">เลือกเลข</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
